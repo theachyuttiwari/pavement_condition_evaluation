@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+</head>
+<body>
+    <h1>Results</h1>
+    <table>
+        <tr>
+            <th>Target Variable</th>
+            <th>R-squared</th>
+            <th>MSE</th>
+            <th>MAE</th>
+            <th>MAPE</th>
+        </tr>
+        {% for target, result in results.items() %}
+        <tr>
+            <td>{{ target }}</td>
+            <td>{{ result['R-squared'] }}</td>
+            <td>{{ result['MSE'] }}</td>
+            <td>{{ result['MAE'] }}</td>
+            <td>{{ result['MAPE'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
